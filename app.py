@@ -19,9 +19,9 @@ def setup():
                    './_data/DogQuotes/DogQuotesCSV.csv']
 
     quotes = []
-    for f in quote_files:
+    for files in quote_files:
         try:
-            quotes.extend(Ingestor.parse(f))
+            quotes.extend(Ingestor.parse(files))
         except ValueError as error:
             print(f"ValueError: {error}")
 
